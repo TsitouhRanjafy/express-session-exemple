@@ -2,26 +2,26 @@
 On va faire une exemple d'utilisation du `express-session` avec `typescript`
 ## Installation
 Premièrement , executer ce cmd ci-dessous pour initialiser notre projet.
-```
+```bash
   npm init -y
 ```
 Après , installé les dependecies nécessaire.
 
-```
+```bash
   npm i --save-dev express express-session typescript @types/express @types/express-session
 ```
 ## Configuration
 On va maintenant configurer notre projet. Initialiser d'abord typescript et créer le dossier source (comme mon depôt)
-```
+```bash
   tsc --init
 ```
-```
+```json
   // tscconfig.json
   {
   "compilerOptions": {
     "target": "es2022",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "module": "commonjs",                                /* Specify what module code is generated. */
-     "outDir": "./dist/",                                   /* Specify an output folder for all emitted files. */
+     "outDir": "./dist/",                                /* Specify an output folder for all emitted files. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
     "strict": true,                                      /* Enable all strict type-checking options. */
@@ -30,7 +30,8 @@ On va maintenant configurer notre projet. Initialiser d'abord typescript et cré
   "include": ["./src/**/*.ts"]
 }
 ```
-```
+
+```javascript
 import express, { Application , Request , Response } from 'express'
 import session from 'express-session';
 
@@ -92,7 +93,7 @@ app.listen(PORT,()=>{
 })
 ```
 On peut lancer le serveur maintenant 
-```
+```bash
   npm test
 ```
 ![Screenshot_2024-08-02_16-26-09](https://github.com/user-attachments/assets/94876e9c-b619-4f57-8a79-9fc480a16f9b)
